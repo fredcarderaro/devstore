@@ -7,6 +7,7 @@ declare namespace Cypress {
   }
 }
 
+// Add command searchByQuery
 Cypress.Commands.add('searchByQuery', (query: string) => {
   cy.visit('/')
 
