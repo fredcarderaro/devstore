@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { CartWidget } from './cart-widget'
 import { SearchForm } from './search-form'
+import { Suspense } from 'react'
 
 export function Header() {
   return (
@@ -11,8 +12,10 @@ export function Header() {
           devstore
         </Link>
 
-        {/* Componente search form isolado para usar client component */}
-        <SearchForm />
+        <Suspense>
+          {/* Componente search form isolado para usar client component */}
+          <SearchForm />
+        </Suspense>
       </div>
       <div className="flex items-center gap-4">
         <CartWidget />
