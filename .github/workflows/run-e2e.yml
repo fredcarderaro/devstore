@@ -17,7 +17,7 @@ jobs:
       - name: Install PNPM
         uses: pnpm/action-setup@v2
         with:
-          vrsion: 8
+          version: 8
           run_install: false
 
       - name: Get pnpm store directory
